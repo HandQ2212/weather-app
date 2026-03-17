@@ -5,7 +5,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.fragment.NavHostFragment
 import com.app.weatherapp.databinding.ActivityMainBinding
+import com.app.weatherapp.R
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
