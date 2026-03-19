@@ -1,0 +1,548 @@
+﻿
+> Configure project :app
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+ksp-1.9.22-1.0.17 is too old for kotlin-2.0.21. Please upgrade ksp or downgrade kotlin-gradle-plugin to 1.9.22.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:dataBindingTriggerDebug UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+
+> Task :app:compileDebugKotlin FAILED
+./gradlew : e: org.jetb
+rains.kotlin.util.FileA
+nalysisException: 
+While analysing D:/ProP
+TIT/TeamMobile/WeatherA
+pp/app/src/main/java/co
+m/app/weatherapp/data/l
+ocal/NotificationDao.kt
+:15:5: java.lang.Illega
+lArgumentException: 
+source must not be null
+At line:1 char:1
++ ./gradlew 
+assembleDebug > 
+output_error.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo     
+         : 
+NotSpecified    : (e: 
+org.jetbrain.    ..ust 
+not be null:S    
+tring) [], RemoteEx    
+ception
+    + 
+FullyQualifiedErr    
+orId : NativeComman    
+dError
+ 
+	at org.jetbrains.kotli
+n.util.AnalysisExceptio
+nsKt.wrapIntoFileAnalys
+isExceptionIfNeeded(Ana
+lysisExceptions.kt:57)
+	at org.jetbrains.kotli
+n.fir.FirCliExceptionHa
+ndler.handleExceptionOn
+FileAnalysis(Utils.kt:2
+49)
+	at org.jetbrains.kotli
+n.fir.pipeline.AnalyseK
+t.runCheckers(analyse.k
+t:46)
+	at org.jetbrains.kotli
+n.fir.pipeline.FirUtils
+Kt.resolveAndCheckFir(f
+irUtils.kt:77)
+	at org.jetbrains.kotli
+n.fir.pipeline.FirUtils
+Kt.buildResolveAndCheck
+FirViaLightTree(firUtil
+s.kt:88)
+	at org.jetbrains.kotli
+n.cli.jvm.compiler.pipe
+line.JvmCompilerPipelin
+eKt.compileModuleToAnal
+yzedFir(jvmCompilerPipe
+line.kt:319)
+	at org.jetbrains.kotli
+n.cli.jvm.compiler.pipe
+line.JvmCompilerPipelin
+eKt.compileModulesUsing
+FrontendIrAndLightTree(
+jvmCompilerPipeline.kt:
+118)
+	at org.jetbrains.kotli
+n.cli.jvm.K2JVMCompiler
+.doExecute(K2JVMCompile
+r.kt:148)
+	at org.jetbrains.kotli
+n.cli.jvm.K2JVMCompiler
+.doExecute(K2JVMCompile
+r.kt:43)
+	at org.jetbrains.kotli
+n.cli.common.CLICompile
+r.execImpl(CLICompiler.
+kt:103)
+	at org.jetbrains.kotli
+n.cli.common.CLICompile
+r.execImpl(CLICompiler.
+kt:49)
+	at org.jetbrains.kotli
+n.cli.common.CLITool.ex
+ec(CLITool.kt:101)
+	at org.jetbrains.kotli
+n.incremental.Increment
+alJvmCompilerRunner.run
+Compiler(IncrementalJvm
+CompilerRunner.kt:464)
+	at org.jetbrains.kotli
+n.incremental.Increment
+alJvmCompilerRunner.run
+Compiler(IncrementalJvm
+CompilerRunner.kt:73)
+	at org.jetbrains.kotli
+n.incremental.Increment
+alCompilerRunner.doComp
+ile(IncrementalCompiler
+Runner.kt:506)
+	at org.jetbrains.kotli
+n.incremental.Increment
+alCompilerRunner.compil
+eImpl(IncrementalCompil
+erRunner.kt:423)
+	at org.jetbrains.kotli
+n.incremental.Increment
+alCompilerRunner.compil
+eNonIncrementally(Incre
+mentalCompilerRunner.kt
+:301)
+	at org.jetbrains.kotli
+n.incremental.Increment
+alCompilerRunner.compil
+e(IncrementalCompilerRu
+nner.kt:129)
+	at org.jetbrains.kotli
+n.daemon.CompileService
+ImplBase.execIncrementa
+lCompiler(CompileServic
+eImpl.kt:675)
+	at org.jetbrains.kotli
+n.daemon.CompileService
+ImplBase.access$execInc
+rementalCompiler(Compil
+eServiceImpl.kt:92)
+	at org.jetbrains.kotli
+n.daemon.CompileService
+Impl.compile(CompileSer
+viceImpl.kt:1660)
+	at java.base/jdk.inter
+nal.reflect.DirectMetho
+dHandleAccessor.invoke(
+DirectMethodHandleAcces
+sor.java:103)
+	at java.base/java.lang
+.reflect.Method.invoke(
+Method.java:580)
+	at java.rmi/sun.rmi.se
+rver.UnicastServerRef.d
+ispatch(UnicastServerRe
+f.java:360)
+	at java.rmi/sun.rmi.tr
+ansport.Transport$1.run
+(Transport.java:200)
+	at java.rmi/sun.rmi.tr
+ansport.Transport$1.run
+(Transport.java:197)
+	at java.base/java.secu
+rity.AccessController.d
+oPrivileged(AccessContr
+oller.java:714)
+	at java.rmi/sun.rmi.tr
+ansport.Transport.servi
+ceCall(Transport.java:1
+96)
+	at java.rmi/sun.rmi.tr
+ansport.tcp.TCPTranspor
+t.handleMessages(TCPTra
+nsport.java:598)
+	at java.rmi/sun.rmi.tr
+ansport.tcp.TCPTranspor
+t$ConnectionHandler.run
+0(TCPTransport.java:844
+)
+	at java.rmi/sun.rmi.tr
+ansport.tcp.TCPTranspor
+t$ConnectionHandler.lam
+bda$run$0(TCPTransport.
+java:721)
+	at java.base/java.secu
+rity.AccessController.d
+oPrivileged(AccessContr
+oller.java:400)
+	at java.rmi/sun.rmi.tr
+ansport.tcp.TCPTranspor
+t$ConnectionHandler.run
+(TCPTransport.java:720)
+	at java.base/java.util
+.concurrent.ThreadPoolE
+xecutor.runWorker(Threa
+dPoolExecutor.java:1144
+)
+	at java.base/java.util
+.concurrent.ThreadPoolE
+xecutor$Worker.run(Thre
+adPoolExecutor.java:642
+)
+	at java.base/java.lang
+.Thread.run(Thread.java
+:1575)
+Caused by: java.lang.Il
+legalArgumentException:
+ source must not be 
+null
+	at org.jetbrains.kotli
+n.diagnostics.KtDiagnos
+ticReportHelpersKt.requ
+ireNotNull(KtDiagnostic
+ReportHelpers.kt:68)
+	at org.jetbrains.kotli
+n.diagnostics.KtDiagnos
+ticReportHelpersKt.repo
+rtOn(KtDiagnosticReport
+Helpers.kt:39)
+	at org.jetbrains.kotli
+n.diagnostics.KtDiagnos
+ticReportHelpersKt.repo
+rtOn$default(KtDiagnost
+icReportHelpers.kt:31)
+	at org.jetbrains.kotli
+n.fir.analysis.checkers
+.expression.FirIncompat
+ibleClassExpressionChec
+ker.checkSourceElement(
+FirIncompatibleClassExp
+ressionChecker.kt:50)
+	at org.jetbrains.kotli
+n.fir.analysis.checkers
+.expression.FirIncompat
+ibleClassExpressionChec
+ker.checkType$checkers(
+FirIncompatibleClassExp
+ressionChecker.kt:42)
+	at org.jetbrains.kotli
+n.fir.analysis.checkers
+.type.FirIncompatibleCl
+assTypeChecker.check(Fi
+rIncompatibleClassTypeC
+hecker.kt:17)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.components.TypeCheck
+ersDiagnosticComponent.
+check(TypeCheckersDiagn
+osticComponent.kt:81)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.components.TypeCheck
+ersDiagnosticComponent.
+visitResolvedTypeRef(Ty
+peCheckersDiagnosticCom
+ponent.kt:53)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.components.TypeCheck
+ersDiagnosticComponent.
+visitResolvedTypeRef(Ty
+peCheckersDiagnosticCom
+ponent.kt:19)
+	at org.jetbrains.kotli
+n.fir.types.FirResolved
+TypeRef.accept(FirResol
+vedTypeRef.kt:28)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.CheckerRunningDiagno
+sticCollectorVisitor.ch
+eckElement(CheckerRunni
+ngDiagnosticCollectorVi
+sitor.kt:24)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitRes
+olvedTypeRef(AbstractDi
+agnosticCollectorVisito
+r.kt:248)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitRes
+olvedTypeRef(AbstractDi
+agnosticCollectorVisito
+r.kt:30)
+	at org.jetbrains.kotli
+n.fir.types.FirResolved
+TypeRef.accept(FirResol
+vedTypeRef.kt:28)
+	at org.jetbrains.kotli
+n.fir.declarations.impl
+.FirSimpleFunctionImpl.
+acceptChildren(FirSimpl
+eFunctionImpl.kt:63)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitNes
+tedElements(AbstractDia
+gnosticCollectorVisitor
+.kt:38)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitWit
+hDeclarationAndReceiver
+(AbstractDiagnosticColl
+ectorVisitor.kt:311)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitSim
+pleFunction(AbstractDia
+gnosticCollectorVisitor
+.kt:118)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitSim
+pleFunction(AbstractDia
+gnosticCollectorVisitor
+.kt:30)
+	at org.jetbrains.kotli
+n.fir.declarations.FirS
+impleFunction.accept(Fi
+rSimpleFunction.kt:51)
+	at org.jetbrains.kotli
+n.fir.declarations.impl
+.FirRegularClassImpl.ac
+ceptChildren(FirRegular
+ClassImpl.kt:63)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitNes
+tedElements(AbstractDia
+gnosticCollectorVisitor
+.kt:38)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitWit
+hDeclarationAndReceiver
+(AbstractDiagnosticColl
+ectorVisitor.kt:311)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitCla
+ssAndChildren(AbstractD
+iagnosticCollectorVisit
+or.kt:87)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitReg
+ularClass(AbstractDiagn
+osticCollectorVisitor.k
+t:92)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitReg
+ularClass(AbstractDiagn
+osticCollectorVisitor.k
+t:30)
+	at org.jetbrains.kotli
+n.fir.declarations.FirR
+egularClass.accept(FirR
+egularClass.kt:48)
+	at org.jetbrains.kotli
+n.fir.declarations.impl
+.FirFileImpl.acceptChil
+dren(FirFileImpl.kt:57)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitNes
+tedElements(AbstractDia
+gnosticCollectorVisitor
+.kt:38)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitFil
+e(AbstractDiagnosticCol
+lectorVisitor.kt:1151)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llectorVisitor.visitFil
+e(AbstractDiagnosticCol
+lectorVisitor.kt:30)
+	at org.jetbrains.kotli
+n.fir.declarations.FirF
+ile.accept(FirFile.kt:4
+2)
+	at org.jetbrains.kotli
+n.fir.analysis.collecto
+rs.AbstractDiagnosticCo
+llector.collectDiagnost
+ics(AbstractDiagnosticC
+ollector.kt:36)
+	at org.jetbrains.kotli
+n.fir.pipeline.AnalyseK
+t.runCheckers(analyse.k
+t:34)
+	... 33 more
+
+e: file:///C:/Users/ASU
+S/.gradle/caches/8.13/t
+ransforms/5840b274a27c5
+2db6ed4b73971af8ae8/tra
+nsformed/databinding-kt
+x-8.13.2-api.jar!/META-
+INF/databindingKtx_rele
+ase.kotlin_module 
+Module was compiled 
+with an incompatible 
+version of Kotlin. The 
+binary version of its 
+metadata is 2.2.0, 
+expected version is 
+2.0.0.
+e: file:///C:/Users/ASU
+S/.gradle/caches/module
+s-2/files-2.1/org.jetbr
+ains.kotlin/kotlin-stdl
+ib/2.2.0/fdfc65fbc42fda
+253a26f61dac3c0aca335fa
+e96/kotlin-stdlib-2.2.0
+.jar!/META-INF/kotlin-s
+tdlib-jdk7.kotlin_modul
+e Module was compiled 
+with an incompatible 
+version of Kotlin. The 
+binary version of its 
+metadata is 2.2.0, 
+expected version is 
+2.0.0.
+e: file:///C:/Users/ASU
+S/.gradle/caches/module
+s-2/files-2.1/org.jetbr
+ains.kotlin/kotlin-stdl
+ib/2.2.0/fdfc65fbc42fda
+253a26f61dac3c0aca335fa
+e96/kotlin-stdlib-2.2.0
+.jar!/META-INF/kotlin-s
+tdlib-jdk8.kotlin_modul
+e Module was compiled 
+with an incompatible 
+version of Kotlin. The 
+binary version of its 
+metadata is 2.2.0, 
+expected version is 
+2.0.0.
+e: file:///C:/Users/ASU
+S/.gradle/caches/module
+s-2/files-2.1/org.jetbr
+ains.kotlin/kotlin-stdl
+ib/2.2.0/fdfc65fbc42fda
+253a26f61dac3c0aca335fa
+e96/kotlin-stdlib-2.2.0
+.jar!/META-INF/kotlin-s
+tdlib.kotlin_module 
+Module was compiled 
+with an incompatible 
+version of Kotlin. The 
+binary version of its 
+metadata is 2.2.0, 
+expected version is 
+2.0.0.
+
+FAILURE: Build failed 
+with an exception.
+
+* What went wrong:
+Execution failed for 
+task ':app:compileDebug
+Kotlin'.
+> A failure occurred 
+while executing org.jet
+brains.kotlin.compilerR
+unner.GradleCompilerRun
+nerWithWorkers$GradleKo
+tlinCompilerWorkAction
+   > Internal compiler 
+error. See log for 
+more details
+
+* Try:
+> Run with 
+--stacktrace option to 
+get the stack trace.
+> Run with --info or 
+--debug option to get 
+more log output.
+> Run with --scan to 
+get full insights.
+> Get more help at http
+s://help.gradle.org.
+
+BUILD FAILED in 2s
+32 actionable tasks: 1 executed, 31 up-to-date

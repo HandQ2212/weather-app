@@ -136,7 +136,12 @@
                         android:text="Wind"
                         android:textColor="@color/white" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="|" android:textColor="@color/white" android:layout_marginHorizontal="16dp" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text='@{String.valueOf(weather.forecast.forecastDays[0].day.maxWindKph) + " km/h"}' android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/tvWindValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-- km/h"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -154,11 +159,29 @@
                         android:text="Hum"
                         android:textColor="@color/white" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="|" android:textColor="@color/white" android:layout_marginHorizontal="16dp" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text='@{String.valueOf(weather.forecast.forecastDays[0].day.maxWindKph) + " %"}' android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/tvHumValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-- %"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
             </LinearLayout>
+            
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:indeterminateTint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+                
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

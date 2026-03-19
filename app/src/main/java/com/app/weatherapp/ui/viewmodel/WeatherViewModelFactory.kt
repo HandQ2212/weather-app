@@ -14,6 +14,10 @@ class WeatherViewModelFactory(
             @Suppress("UNCHECKED_CAST")
             return WeatherViewModel(repository, notificationDao) as T
         }
+        if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return HomeViewModel(repository, notificationDao) as T
+        }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

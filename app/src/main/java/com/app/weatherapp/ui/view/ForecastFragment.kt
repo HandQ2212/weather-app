@@ -1,60 +1,100 @@
 package com.app.weatherapp.ui.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.app.weatherapp.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import com.app.weatherapp.BuildConfig
+import com.app.weatherapp.data.local.AppDatabase
+import com.app.weatherapp.data.local.UserPreferenceStore
+import com.app.weatherapp.data.model.WeatherResponse
+import com.app.weatherapp.data.remote.RetrofitInstance
+import com.app.weatherapp.data.repository.WeatherRepository
+import com.app.weatherapp.databinding.FragmentForecastBinding
+import com.app.weatherapp.ui.viewmodel.WeatherViewModel
+import com.app.weatherapp.ui.viewmodel.WeatherViewModelFactory
+import com.app.weatherapp.utils.Resource
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ForecastFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ForecastFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private var _binding: FragmentForecastBinding? = null
+    private val binding get() = _binding!!
+
+    private lateinit var preferenceStore: UserPreferenceStore
+
+    private val weatherViewModel: WeatherViewModel by viewModels {
+        WeatherViewModelFactory(
+            WeatherRepository(RetrofitInstance.api),
+            AppDatabase.getDatabase(requireContext()).notificationDao()
+        )
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forecast, container, false)
+    ): View {
+        _binding = FragmentForecastBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ForecastFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ForecastFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        preferenceStore = UserPreferenceStore(requireContext())
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            val query = preferenceStore.locationQueryFlow.first().ifBlank { "Hanoi" }
+            weatherViewModel.fetchWeather(BuildConfig.WEATHER_API_KEY, query)
+        }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            weatherViewModel.weatherState.collectLatest { state ->
+                when (state) {
+                    is Resource.Loading -> {
+                        binding.progressBarForecast.visibility = View.VISIBLE
+                    }
+
+                    is Resource.Success -> {
+                        binding.progressBarForecast.visibility = View.GONE
+                        state.data?.let { renderForecast(it) }
+                    }
+
+                    is Resource.Error -> {
+                        binding.progressBarForecast.visibility = View.GONE
+                        binding.tv24hContent.text = state.message ?: "Không tải được dữ liệu"
+                        binding.tv5DayContent.text = ""
+                    }
                 }
             }
+        }
+    }
+
+    private fun renderForecast(weather: WeatherResponse) {
+        val today = weather.forecast.forecastday.firstOrNull()
+        val hourlyText = buildString {
+            today?.hour?.take(24)?.forEach { hour ->
+                append("${hour.time.takeLast(5)}  |  ${hour.temp_c.toInt()}°  |  ${hour.condition.text}\n")
+            }
+        }
+
+        val dailyText = buildString {
+            weather.forecast.forecastday.take(5).forEach { day ->
+                append("${day.date}  |  ${day.day.condition.text}  |  ${day.day.maxtemp_c.toInt()}°\n")
+            }
+        }
+
+        binding.tv24hContent.text = if (hourlyText.isBlank()) "Không có dữ liệu" else hourlyText
+        binding.tv5DayContent.text = if (dailyText.isBlank()) "Không có dữ liệu" else dailyText
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
