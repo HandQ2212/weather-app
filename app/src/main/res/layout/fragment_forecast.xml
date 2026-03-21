@@ -40,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/overpass_bold"
-                android:text="Dự báo chi tiết"
+                android:text="@string/forecast_title"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
@@ -50,7 +50,7 @@
                 android:layout_marginTop="4dp"
                 android:alpha="0.9"
                 android:fontFamily="@font/overpass"
-                android:text="Thời tiết trong ngày và những ngày tới"
+                android:text="@string/forecast_subtitle"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
@@ -58,10 +58,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                app:cardBackgroundColor="#30FFFFFF"
+                app:cardBackgroundColor="@color/white_19"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="0dp"
-                app:strokeColor="#55FFFFFF"
+                app:strokeColor="@color/white_33"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
@@ -74,7 +74,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/overpass_bold"
-                        android:text="24 giờ tới"
+                        android:text="@string/forecast_next_24h"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
@@ -95,8 +95,8 @@
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/overpass"
                         android:gravity="center"
-                        android:text="Không có dữ liệu theo giờ"
-                        android:textColor="#CCFFFFFF"
+                        android:text="@string/forecast_hourly_empty"
+                        android:textColor="@color/white_80"
                         android:textSize="14sp"
                         android:visibility="gone" />
                 </LinearLayout>
@@ -106,10 +106,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:cardBackgroundColor="#26FFFFFF"
+                app:cardBackgroundColor="@color/white_16"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="0dp"
-                app:strokeColor="#4DFFFFFF"
+                app:strokeColor="@color/white_30"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
@@ -122,7 +122,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/overpass_bold"
-                        android:text="Những ngày tiếp theo"
+                        android:text="@string/forecast_next_days"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 
@@ -142,8 +142,8 @@
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/overpass"
                         android:gravity="center"
-                        android:text="Không có dữ liệu theo ngày"
-                        android:textColor="#CCFFFFFF"
+                        android:text="@string/forecast_daily_empty"
+                        android:textColor="@color/white_80"
                         android:textSize="14sp"
                         android:visibility="gone" />
                 </LinearLayout>

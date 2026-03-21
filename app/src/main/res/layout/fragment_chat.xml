@@ -80,7 +80,7 @@
             android:minHeight="40dp"
             android:paddingHorizontal="8dp"
             android:textColor="@color/white"
-            android:textColorHint="#CCFFFFFF" />
+            android:textColorHint="@color/white_80" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSend"

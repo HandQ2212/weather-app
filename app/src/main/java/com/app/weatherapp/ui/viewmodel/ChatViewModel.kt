@@ -18,7 +18,7 @@ class ChatViewModel(
         listOf(
             ChatMessageUi(
                 id = System.currentTimeMillis(),
-                text = "Chao ban, minh la tro ly thoi tiet. Ban co the hoi nen mac gi, co can dem ao mua, hoac lap ke hoach di chuyen theo thoi tiet.",
+                text = "Xin chào! Tôi là trợ lý ảo của bạn. Bạn có thể hỏi tôi những vấn đề về thời tiết như nên mặc gì vào thời tiết hôm nay, có nên đem áo mưa hoặc lập kế hoạch di chuyển theo thời tiết",
                 isUser = false
             )
         )

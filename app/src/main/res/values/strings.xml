@@ -2,8 +2,42 @@
     <string name="app_name">Weather App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="forecast_title">Dự báo chi tiết</string>
+    <string name="forecast_subtitle">Thời tiết trong ngày và những ngày tới</string>
+    <string name="forecast_next_24h">24 giờ tới</string>
+    <string name="forecast_hourly_empty">Không có dữ liệu theo giờ</string>
+    <string name="forecast_next_days">Những ngày tiếp theo</string>
+    <string name="forecast_daily_empty">Không có dữ liệu theo ngày</string>
+
+    <string name="hour_item_time_placeholder">09:00</string>
+    <string name="hour_item_temp_placeholder">28°</string>
+    <string name="hour_item_condition_placeholder">Mây rải rác</string>
+    <string name="hour_item_rain_placeholder">Mưa: 40%%</string>
+    <string name="hour_item_wind_placeholder">Gió: 15 km/h</string>
+
+    <string name="day_item_date_placeholder">Thứ Hai, 20/03</string>
+    <string name="day_item_condition_placeholder">Nhiều mây</string>
+    <string name="day_item_extra_placeholder">Mưa 30%% • Ẩm 78%%</string>
+    <string name="day_item_temp_placeholder">32° / 26°</string>
+
+    <string name="home_placeholder_text">...</string>
+    <string name="home_wind_label">Wind</string>
+    <string name="home_hum_label">Hum</string>
+    <string name="home_divider">|</string>
+    <string name="home_wind_placeholder">-- km/h</string>
+    <string name="home_hum_placeholder">-- %%</string>
+
+    <string name="notification_title">Your notification</string>
+    <string name="notification_new">New</string>
+    <string name="notification_earlier">Earlier</string>
+    <string name="notification_empty">No new notifications</string>
+
+    <string name="search_city_hint">Nhập tên thành phố...</string>
+    <string name="search_type_hint">Gõ để tìm thành phố</string>
+
     <string name="chat_title">Chat AI</string>
-    <string name="chat_hint">Hoi thoi tiet, trang phuc, di chuyen...</string>
-    <string name="chat_send">Gui</string>
-    <string name="chat_back">Quay lai</string>
+    <string name="chat_hint">Hỏi thời tiết, trang phục,...</string>
+    <string name="chat_send">Gửi</string>
+    <string name="chat_back">Quay lại</string>
 </resources>

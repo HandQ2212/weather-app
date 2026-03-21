@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
-    app:cardBackgroundColor="#54FFFFFF"
+    app:cardBackgroundColor="@color/white_33"
     app:cardCornerRadius="20dp"
     app:cardElevation="0dp"
-    app:strokeColor="#70FFFFFF"
+    app:strokeColor="@color/white_44"
     app:strokeWidth="1dp">
 
     <LinearLayout
@@ -28,8 +28,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/overpass_bold"
-                android:text="Thứ Hai, 20/03"
-                android:textColor="#1B335F"
+                android:text="@string/day_item_date_placeholder"
+                android:textColor="@color/forecast_text_primary"
                 android:textSize="16sp" />
 
             <TextView
@@ -40,8 +40,8 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/overpass"
                 android:maxLines="1"
-                android:text="Nhiều mây"
-                android:textColor="#2F4C7C"
+                android:text="@string/day_item_condition_placeholder"
+                android:textColor="@color/forecast_text_secondary"
                 android:textSize="14sp" />
 
             <TextView
@@ -50,8 +50,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:fontFamily="@font/overpass"
-                android:text="Mưa 30% • Ẩm 78%"
-                android:textColor="#305990"
+                android:text="@string/day_item_extra_placeholder"
+                android:textColor="@color/forecast_text_tertiary"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -61,8 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:fontFamily="@font/overpass_bold"
-            android:text="32° / 26°"
-            android:textColor="#1B335F"
+            android:text="@string/day_item_temp_placeholder"
+            android:textColor="@color/forecast_text_primary"
             android:textSize="16sp" />
 
     </LinearLayout>

@@ -2,4 +2,35 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_44">#70FFFFFF</color>
+    <color name="white_33">#55FFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_16">#26FFFFFF</color>
+    <color name="white_19">#30FFFFFF</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="main_gradient_start">#47BFDF</color>
+    <color name="main_gradient_end">#4A91FF</color>
+
+    <color name="icon_light_gray">#E3E3E3</color>
+    <color name="notification_drag_handle">#D1D5DB</color>
+    <color name="notification_text">#444E72</color>
+    <color name="notification_empty_text">#999999</color>
+    <color name="search_hint_text">#5A6D82</color>
+    <color name="search_icon_tint">#4A5568</color>
+    <color name="search_title_text">#2D3748</color>
+
+    <color name="forecast_text_primary">#1B335F</color>
+    <color name="forecast_text_secondary">#2F4C7C</color>
+    <color name="forecast_text_tertiary">#305990</color>
+
+    <color name="chat_bot_bubble">#E6EEF8</color>
+    <color name="chat_user_bubble">#4A90E2</color>
+
+    <color name="launcher_background_green">#3DDC84</color>
+    <color name="launcher_shadow">#44000000</color>
 </resources>
