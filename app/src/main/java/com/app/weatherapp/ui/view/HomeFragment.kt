@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.app.weatherapp.BuildConfig
 import com.app.weatherapp.data.local.AppDatabase
 import com.app.weatherapp.data.local.UserPreferenceStore
@@ -93,12 +94,22 @@ class HomeFragment : Fragment() {
                     is Resource.Success -> {
                         binding.progressBar.visibility = View.GONE
                         resource.data?.let {
+                            val iconUrl = it.current.condition.icon
+                                .takeIf { raw -> raw.isNotBlank() }
+                                ?.let { raw -> if (raw.startsWith("//")) "https:$raw" else raw }
+
                             binding.tvCity.text = it.location.name
                             binding.tvTemp.text = "${it.current.temp_c.toInt()}°"
                             binding.tvCondition.text = it.current.condition.text
                             binding.tvWindValue.text = "${it.current.wind_kph.toInt()} km/h"
                             binding.tvHumValue.text = "${it.current.humidity}%"
                             binding.tvDate.text = it.location.localtime
+
+                            Glide.with(this@HomeFragment)
+                                .load(iconUrl)
+                                .placeholder(R.drawable.ic_cloud)
+                                .error(R.drawable.ic_cloud)
+                                .into(binding.ivMainIcon)
                         }
                     }
                     is Resource.Error -> {

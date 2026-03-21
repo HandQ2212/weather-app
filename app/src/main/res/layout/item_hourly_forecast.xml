@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="164dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    app:cardBackgroundColor="#66FFFFFF"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#80FFFFFF"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/tvHourTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/overpass_bold"
+            android:text="09:00"
+            android:textColor="#1B335F"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvHourTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/overpass_bold"
+            android:text="28°"
+            android:textColor="#1B335F"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvHourCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/overpass"
+            android:maxLines="2"
+            android:text="Mây rải rác"
+            android:textColor="#2F4C7C"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvHourRain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/overpass"
+            android:text="Mưa: 40%"
+            android:textColor="#305990"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvHourWind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/overpass"
+            android:text="Gió: 15 km/h"
+            android:textColor="#305990"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
