@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 
 class RetrofitInstance {
     companion object {
-        private val retrofit by lazy {
+        private val weatherRetrofit by lazy {
             val logging = HttpLoggingInterceptor()
             logging.setLevel(HttpLoggingInterceptor.Level.BODY)
             val client = OkHttpClient.Builder()
@@ -26,11 +26,32 @@ class RetrofitInstance {
                 .build()
         }
 
+        private val geminiRetrofit by lazy {
+            val logging = HttpLoggingInterceptor()
+            logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+            val client = OkHttpClient.Builder()
+                .addInterceptor(logging)
+                .connectTimeout(30, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(30, TimeUnit.SECONDS)
+                .build()
+
+            Retrofit.Builder()
+                .baseUrl(Constans.GEMINI_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(client)
+                .build()
+        }
+
         val api by lazy {
-            retrofit.create(WeatherApiService::class.java)
+            weatherRetrofit.create(WeatherApiService::class.java)
         }
 
         val apiService: WeatherApiService
             get() = api
+
+        val geminiApiService: GeminiApiService by lazy {
+            geminiRetrofit.create(GeminiApiService::class.java)
+        }
     }
 }

@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/forecastFragment"
@@ -35,4 +38,9 @@
         android:name="com.app.weatherapp.ui.view.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.app.weatherapp.ui.view.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>

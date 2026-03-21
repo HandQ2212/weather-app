@@ -23,6 +23,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "WEATHER_API_KEY", "\"${properties.getProperty("WEATHER_API_KEY")}\"")
+        buildConfigField("String", "GEMINI_API_KEY", "\"${properties.getProperty("GEMINI_API_KEY", "")}\"")
     }
 
     buildFeatures {
@@ -93,4 +94,7 @@ dependencies {
 
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/chat_back"
+        android:src="@drawable/ic_arrow_down"
+        android:rotation="90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvChatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overpass_bold"
+        android:text="@string/chat_title"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="@id/btnBack"
+        android:layout_marginStart="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMessages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/inputContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_glass_card"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/chat_hint"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:minHeight="40dp"
+            android:paddingHorizontal="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="#CCFFFFFF" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:text="@string/chat_send"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
