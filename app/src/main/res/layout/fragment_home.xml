@@ -16,11 +16,22 @@
         android:padding="24dp">
 
         <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/btnDown"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            />
+
+        <ImageView
             android:id="@+id/btnLocation"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_location" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnDown"
             android:layout_marginTop="32dp" />
 
         <TextView
@@ -36,17 +47,6 @@
             app:layout_constraintBottom_toBottomOf="@id/btnLocation"
             app:layout_constraintStart_toEndOf="@id/btnLocation"
             app:layout_constraintTop_toTopOf="@id/btnLocation" />
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:id="@+id/btnDown"
-            android:src="@drawable/ic_arrow_down"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tvCity"
-            android:layout_marginTop="32dp"
-            android:layout_marginStart="16dp"
-            />
 
 
 
